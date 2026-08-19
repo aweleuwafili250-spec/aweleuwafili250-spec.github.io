@@ -1,40 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Uwafili Awele Lewis | Writer • Researcher • Virtual Assistant</title>
-
-  <meta name="description" content="Professional portfolio of Uwafili Awele Lewis — writer, researcher, virtual assistant and Christian content creator.">
-.profile-photo {
-  text-align: center;
-  margin-bottom: 30px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional website of Uwafili Awele Lewis — writer, researcher, virtual assistant and Christian content creator.">
+<meta name="author" content="Uwafili Awele Lewis">
+<title>Uwafili Awele Lewis | Writer • Researcher • Digital Professional</title>
+<style>
+:root{--primary:#2457c5;--primary-dark:#173d91;--dark:#111827;--text:#4b5563;--light:#f5f8ff;--white:#fff;--border:#dbe3f0;--shadow:0 12px 35px rgba(17,24,39,.08);--radius:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.7;color:var(--text);background:var(--white)}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:1.25rem;font-weight:800;color:var(--dark);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{font-weight:700;color:var(--dark)}
+.nav-links a:hover{color:var(--primary)}
+.menu-btn{display:none;border:0;background:transparent;font-size:1.8rem;cursor:pointer;color:var(--dark)}
+.hero{background:linear-gradient(135deg,#f3f7ff 0%,#fff 60%,#eef4ff 100%);padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:.85fr 1.4fr;align-items:center;gap:60px}
+.profile-photo{text-align:center}
+.profile-photo img{width:260px;height:260px;object-fit:cover;object-position:center top;border-radius:50%;border:7px solid #fff;box-shadow:0 15px 40px rgba(0,0,0,.15);margin:auto}
+.eyebrow{color:var(--primary);font-size:.95rem;font-weight:800;letter-spacing:2px;margin-bottom:16px}
+.hero h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.05;color:var(--dark);margin-bottom:24px}
+.hero h1 span{color:var(--primary)}
+.hero p{font-size:1.15rem;max-width:700px;margin-bottom:30px}
+.buttons{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:14px 23px;border-radius:12px;font-weight:800;border:2px solid var(--primary)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-outline{color:var(--primary);background:#fff}
+section{padding:80px 0;scroll-margin-top:80px}
+.section-title{text-align:center;color:var(--dark);font-size:2.2rem;margin-bottom:12px}
+.section-subtitle{text-align:center;max-width:700px;margin:0 auto 40px}
+.about-box{background:var(--light);padding:35px;border-radius:var(--radius);border:1px solid var(--border)}
+.about-box p+p{margin-top:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.card h3{color:var(--dark);margin-bottom:10px;font-size:1.2rem}
+.card-icon{font-size:2rem;margin-bottom:12px}
+.portfolio-card{background:var(--light)}
+.ministry{background:var(--dark);color:#dbe4f5}
+.ministry .section-title{color:#fff}
+.ministry-card{background:#1b2638;border:1px solid #34445d;color:#dbe4f5}
+.ministry-card h3{color:#fff}
+.cv-box{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cv-item{padding:25px;border-left:4px solid var(--primary);background:var(--light);border-radius:10px}
+.cv-item h3{color:var(--dark);margin-bottom:8px}
+.contact{background:var(--light)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact-card{text-align:center;background:#fff;padding:28px 18px;border-radius:var(--radius);border:1px solid var(--border)}
+.contact-card strong{display:block;color:var(--dark);margin-bottom:6px}
+.contact-card a{color:var(--primary);font-weight:700;overflow-wrap:anywhere}
+footer{background:#0b1220;color:#b9c5d8;text-align:center;padding:30px 15px}
+footer strong{color:#fff}
+@media(max-width:850px){
+.hero-grid{grid-template-columns:1fr;text-align:center;gap:35px}
+.hero p{margin-left:auto;margin-right:auto}
+.buttons{justify-content:center}
+.grid,.contact-grid{grid-template-columns:1fr 1fr}
+.cv-box{grid-template-columns:1fr}
+.menu-btn{display:block}
+.nav-links{display:none;position:absolute;left:4%;right:4%;top:70px;flex-direction:column;align-items:stretch;gap:0;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:10px}
+.nav-links.show{display:flex}
+.nav-links a{display:block;padding:12px 14px}
 }
-
-.profile-photo img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+@media(max-width:600px){
+.container{width:min(92%,520px)}
+.hero{padding:55px 0}
+section{padding:60px 0}
+.profile-photo img{width:190px;height:190px}
+.hero h1{font-size:2.8rem}
+.hero p{font-size:1rem}
+.grid,.contact-grid{grid-template-columns:1fr}
+.about-box,.card{padding:23px}
+.brand{font-size:1.05rem}
 }
-  <style>
-    :root {
-      --primary: #2457c5;
-      --primary-dark: #173b8f;
-      --dark: #111827;
-      --text: #344054;
-      --muted: #667085;
-      --light: #f5f8ff;
-      --white: #ffffff;
-      --border: #d9e0ec;
-      --success: #16803c;
-    }
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a href="#home" class="brand">Uwafili Awele Lewis</a>
+<button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+<li><a href="#ministry" onclick="closeMenu()">Ministry</a></li>
+<li><a href="#cv" onclick="closeMenu()">CV</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+</ul>
+</div>
+</header>
 
-    * {
-      box-sizing: border-box;
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="profile-photo">
+<img src="profile.jpg" alt="Uwafili Awele Lewis">
+</div>
+<div>
+<div class="eyebrow">PROFESSIONAL • MINISTRY • DIGITAL</div>
+<h1>Ideas that are <span>clear, useful</span> and impactful.</h1>
+<p>I'm <strong>Uwafili Awele Lewis</strong> — a writer, researcher, virtual assistant and Christian content creator helping people, businesses and ministries communicate their ideas effectively.</p>
+<div class="buttons">
+<a class="btn btn-primary" href="#services">Explore My Services</a>
+<a class="btn btn-outline" href="#contact">Contact Me</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<p class="section-subtitle">A combination of writing, research, digital support and Christian ministry.</p>
+<div class="about-box">
+<p>I am <strong>Uwafili Awele Lewis</strong>, a writer, researcher, virtual assistant and Christian content creator. I enjoy turning ideas, information and research into useful content that people can understand and apply.</p>
+<p>My work brings together communication, biblical research, digital skills and practical assistance for individuals, businesses, churches and ministries.</p>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<h2 class="section-title">What I Can Help With</h2>
+<p class="section-subtitle">Professional services designed to help you communicate, organize and grow.</p>
+<div class="grid">
+<div class="card"><div class="card-icon">✍️</div><h3>Writing</h3><p>Articles, website content, devotionals, social media posts and other clear written materials.</p></div>
+<div class="card"><div class="card-icon">🔎</div><h3>Research</h3><p>Christian, biblical and general research presented in a clear and useful format.</p></div>
+<div class="card"><div class="card-icon">💻</div><h3>Virtual Assistance</h3><p>Online administrative support, information gathering, organization and digital tasks.</p></div>
+<div class="card"><div class="card-icon">📱</div><h3>Social Media</h3><p>Content preparation, posting ideas and support for building a consistent online presence.</p></div>
+<div class="card"><div class="card-icon">📖</div><h3>Christian Research</h3><p>Biblical studies, Christian history, devotional research and ministry content development.</p></div>
+<div class="card"><div class="card-icon">📝</div><h3>Editing & Proofreading</h3><p>Improving grammar, clarity, structure and readability while preserving your message.</p></div>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="container">
+<h2 class="section-title">Portfolio</h2>
+<p class="section-subtitle">Selected areas of work and projects.</p>
+<div class="grid">
+<div class="card portfolio-card"><h3>Digital Content</h3><p>Professional website and digital content projects created to communicate ideas clearly.</p></div>
+<div class="card portfolio-card"><h3>Research Projects</h3><p>Biblical, Christian and general research developed into organized, useful materials.</p></div>
+<div class="card portfolio-card"><h3>Devotional Projects</h3><p>Christian devotional and Bible-reading resources designed to encourage spiritual growth.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ministry" id="ministry">
+<div class="container">
+<h2 class="section-title">Christian Ministry</h2>
+<p class="section-subtitle">Using research, writing and digital tools to serve Christian communities.</p>
+<div class="grid">
+<div class="card ministry-card"><h3>Preaching & Teaching</h3><p>Developing Bible-based teaching materials, sermon ideas and study resources.</p></div>
+<div class="card ministry-card"><h3>Devotional Content</h3><p>Creating practical Christian reflections, prayers and Bible-reading resources.</p></div>
+<div class="card ministry-card"><h3>Christian Research</h3><p>Exploring Scripture, Christian history and theological questions for clearer understanding.</p></div>
+</div>
+</div>
+</section>
+
+<section id="cv">
+<div class="container">
+<h2 class="section-title">Professional Profile</h2>
+<p class="section-subtitle">A brief overview of my background and areas of competence.</p>
+<div class="cv-box">
+<div class="cv-item"><h3>Core Skills</h3><p>Writing • Research • Virtual Assistance • Content Creation • Editing • Social Media Support</p></div>
+<div class="cv-item"><h3>Areas of Interest</h3><p>Christian research • Digital communication • Remote work • Online business • Ministry resources</p></div>
+<div class="cv-item"><h3>Education & Training</h3><p>Trinity Theological College and Baptist Global Bible College, with continuing development in digital skills.</p></div>
+<div class="cv-item"><h3>Work Approach</h3><p>Reliable, clear, organized and focused on producing useful work that meets the client's objectives.</p></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title">Let's Work Together</h2>
+<p class="section-subtitle">Have a project, research task, writing job or digital assignment? Get in touch.</p>
+<div class="contact-grid">
+<div class="contact-card"><strong>Email</strong><a href="mailto:aweleuwafili250@gmail.com">aweleuwafili250@gmail.com</a></div>
+<div class="contact-card"><strong>Phone</strong><a href="tel:+2349066160722">09066160722</a></div>
+<div class="contact-card"><strong>WhatsApp</strong><a href="https://wa.me/2349066160722" target="_blank" rel="noopener">Chat with me</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 <strong>Uwafili Awele Lewis</strong>. All rights reserved.</p>
+<p>Writer • Researcher • Virtual Assistant • Christian Content Creator</p>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show")}
+function closeMenu(){document.getElementById("navLinks").classList.remove("show")}
+</script>
+</body>
+  </html>      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
